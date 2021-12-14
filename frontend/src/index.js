@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Forum from "./pages/Forum";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Profile from "./pages/Profile";
+import Profil from "./pages/Profil";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./style/index.css";
@@ -29,8 +29,8 @@ ReactDOM.render(
         <Route path="/forum">
           <Forum />
         </Route>
-        <Route path="/profile">
-          <Profile />
+        <Route path="/profil">
+          <Profil />
         </Route>
       </DataProvider>
     </Switch>

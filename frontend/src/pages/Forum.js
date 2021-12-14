@@ -63,7 +63,7 @@ export default function Forum() {
   const submitPost = useCallback(() => {
     const userName = dataUser.name;
     const userId = dataUser.id;
-    // formData auqul on ajoute un fichier + tout les champs text
+    // formData auquel on ajoute un fichier + tous les champs text
     const myformData = new FormData();
     myformData.append("title", title);
     myformData.append("content", content);
@@ -77,8 +77,7 @@ export default function Forum() {
         "Content-Type": "multipart/form-data",
         Authorization: LStoken,
       },
-    }).then((res) =>
-    console.log(res));
+    }).then((res) => console.log(res));
     setIsOpenModal(!isOpenModal);
     // refresh page after submit
     window.location.reload();
@@ -135,7 +134,7 @@ export default function Forum() {
 
       <button className="btn upload" onClick={() => setIsOpenModal(true)}>
         <FaPlus />
-        Upload
+        Ajouter
       </button>
       <Modal open={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <input
@@ -151,7 +150,7 @@ export default function Forum() {
         ></input>
         <input
           className="input-title"
-          placeholder="title"
+          placeholder=" Votre titre"
           name="title"
           type="text"
           onChange={(e) => {
@@ -160,7 +159,7 @@ export default function Forum() {
         ></input>
         <textarea
           className="input-content"
-          placeholder="post"
+          placeholder=" Votre message"
           name="content"
           type="text"
           onChange={(e) => {
@@ -168,7 +167,7 @@ export default function Forum() {
           }}
         ></textarea>
         <button className="submit-btn" onClick={submitPost}>
-          SUBMIT
+          ENVOYER
         </button>
       </Modal>
 
@@ -189,7 +188,7 @@ export default function Forum() {
         ></input>
         <input
           className="input-title"
-          placeholder="title"
+          placeholder=" Titre"
           name="title"
           type="text"
           onChange={(e) => {
@@ -198,7 +197,7 @@ export default function Forum() {
         ></input>
         <textarea
           className="input-content"
-          placeholder="post"
+          placeholder=" Votre message"
           name="content"
           type="text"
           onChange={(e) => {
@@ -206,7 +205,7 @@ export default function Forum() {
           }}
         ></textarea>
         <button className="submit-btn" onClick={modifyPost}>
-          MODIFY
+          MODIFIER
         </button>
       </ModifyModal>
 
@@ -218,17 +217,13 @@ export default function Forum() {
           <div key={post.id} className="forum-card">
             <div className="card-title-box">
               <h2>{post.title} </h2>
-              <p className="created-by-tag-laptop">
-                post créé par {post.userName}
-              </p>
+              <p className="created-by-tag-laptop">{post.userName} a écrit</p>
             </div>
-            <p className="created-by-tag-smartphone">
-              post créé par {post.userName}
-            </p>
+            <p className="created-by-tag-smartphone">{post.userName} a écrit</p>
             <div className="card-body">
               <img className="post-img" src={`${post.imageUrl}`} alt="" />
               <div className="container-buttons">
-                {post.userId == userId || dataUser.moderator == true ? (
+                {post.userId === userId || dataUser.moderator === true ? (
                   <div>
                     <button
                       className="delete-btn"
@@ -236,7 +231,7 @@ export default function Forum() {
                         deletePost(post.id, post.userId);
                       }}
                     >
-                      DELETE
+                      SUPPRIMER
                     </button>
                     <button
                       className="modify-btn"
@@ -245,7 +240,7 @@ export default function Forum() {
                         getPostId(postId);
                       }}
                     >
-                      MODIFY
+                      MODIFIER
                     </button>
                   </div>
                 ) : null}

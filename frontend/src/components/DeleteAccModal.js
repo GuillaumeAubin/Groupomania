@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/profile.css";
+import "../style/profil.css";
 
 export default function DeleteAccModal({ open, children, onClose }) {
   if (!open) return null;

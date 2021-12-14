@@ -3,13 +3,13 @@
     margin: 0;
 }
 
-.profile-container {
+.profil-container {
     display: flex;
     flex-direction: row;
     margin: 20px 10%;
 }
 
-.profile-picture-container {
+.profil-picture-container {
     width: 200px; 
     height: 200px; 
     border-radius: 50%;
@@ -17,6 +17,6 @@
     
 }
 
-.profile-info {
+.profil-info {
     margin-left: 100px;
 }

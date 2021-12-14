@@ -36,24 +36,24 @@ function Header() {
         <Link className="header-link" onClick={displayLinks} to="/">
           Accueil
         </Link>
-        <Link className="header-link" onClick={displayLinks} to="/profile">
+        <Link className="header-link" onClick={displayLinks} to="/profil">
           {" "}
-          Profile
+          Profil
         </Link>
         <Link className="header-link" onClick={displayLinks} to="/forum">
           {" "}
-          forum
+          Forum
         </Link>
         <Link className="header-link" onClick={displayLinks} to="/login">
           {" "}
-          login
+          Se connecter
         </Link>
         <Link className="header-link" onClick={displayLinks} to="/signup">
           {" "}
-          signup
+          S'inscrire
         </Link>
         <button className="logout-btn" onClick={logout}>
-          Logout
+          Se déconnecter
         </button>
       </nav>
     </div>

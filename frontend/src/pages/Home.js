@@ -59,10 +59,10 @@ export default function Home() {
   return (
     <div>
       <div className="home-container">
-        <h1>Bienvenue {dataUser.name} ! </h1>
+        <h1>Bienvenue {dataUser.name} !</h1>
         <div className="wrap-container">
           <div className="last-activities-container">
-            <h2>Dernière activités sur le forum multimédia</h2>
+            <h2>Derniers posts du forum</h2>
             <div className="underline" />
 
             <table className="table-last-activities">
@@ -89,8 +89,6 @@ export default function Home() {
                 })}
               </tbody>
             </table>
-
-            {/* <h3>Dernière activités sur le forum de discussion</h3> */}
           </div>
         </div>
       </div>

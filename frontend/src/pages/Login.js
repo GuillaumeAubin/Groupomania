@@ -36,20 +36,19 @@ export default function Login() {
 
   function emailValidation(email) {
     if (!email.match(emailReg)) {
-      alert("error : email must be valid !");
+      alert("Erreur : votre email est invalide !");
     }
     login();
   }
 
   return (
     <div className="form-container">
-      <h1 className="main-title">Sign in to Groupomania</h1>
+      <h1 className="main-title">Se connecter au forum</h1>
       <div className="form-container-box">
         <div className="inputs">
           <div className="input">
-            <label htmlFor="inputEmail">Email:</label>
+            <label htmlFor="inputEmail">Email :</label>
             <input
-              placeholder="email"
               type="email"
               className="form-control"
               id="inputEmail"
@@ -60,9 +59,8 @@ export default function Login() {
           </div>
 
           <div className="input">
-            <label htmlFor="inputPassword">password:</label>
+            <label htmlFor="inputPassword">Mot de passe :</label>
             <input
-              placeholder="password"
               type="password"
               className="form-control"
               id="inputPassword"
@@ -78,7 +76,7 @@ export default function Login() {
             className="submit-btn-login"
             onClick={(() => login, () => emailValidation(email))}
           >
-            SUBMIT
+            SE CONNECTER
           </button>
         </div>
       </div>

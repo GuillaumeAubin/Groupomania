@@ -1,8 +1,8 @@
 
-/*PROFILE*/
+/*profil*/
 
 
-.profile-container {
+.profil-container {
     display: flex;
     margin: 200px 0 50px 0;
     padding: 2%;
@@ -51,7 +51,7 @@
     margin-top: 35px;
   }
   
-  .profile-info-input {
+  .profil-info-input {
     font-weight: 800;
   }
 
@@ -123,7 +123,7 @@
   color: rgb(253, 91, 91);
 }
 
-.delete-profile-msg {
+.delete-profil-msg {
   margin: 150px auto;
   width: 40%;
   height: 160px;
@@ -153,12 +153,12 @@
   background-color: rgb(91, 253, 126);
 }
 
-.profile-line {
+.profil-line {
  display: flex;
  flex-direction: row;
 }
 
-.profile-line-data {
+.profil-line-data {
   margin-left: 50px;
 }
 
@@ -170,7 +170,7 @@
     flex-direction: column;
 }
 
-.profile-line {
+.profil-line {
   margin-bottom: 15px;
 }
 
@@ -179,7 +179,7 @@
   margin: 50px auto;
 }
 
-.profile-container {
+.profil-container {
   background-color: white;
 }
 

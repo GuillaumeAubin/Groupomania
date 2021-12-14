@@ -73,7 +73,7 @@ export default function CommentSection({ postId }) {
         className="add-comment-btn"
         onClick={() => setIsOpenCommentModal(true)}
       >
-        Add a comment
+        Répondre
       </button>
 
       <AddCommentModal
@@ -82,7 +82,7 @@ export default function CommentSection({ postId }) {
       >
         <textarea
           className="input-content"
-          placeholder="Add a comment"
+          placeholder=" Votre commentaire"
           name="content"
           type="text"
           onChange={(e) => {
@@ -90,7 +90,7 @@ export default function CommentSection({ postId }) {
           }}
         ></textarea>
         <button className="submit-btn" onClick={submitComment}>
-          SUBMIT
+          ENVOYER
         </button>
       </AddCommentModal>
 
@@ -99,13 +99,11 @@ export default function CommentSection({ postId }) {
           return (
             <div className="comment-single">
               <div className="comment-inner-container">
-                <p className="comment-of">
-                  - commentaire créé par {comment.userName} -
-                </p>
+                <p className="comment-of">{comment.userName} a répondu</p>
                 <p className="comment-text">{comment.content}</p>
               </div>
 
-              {comment.userId == userId || dataUser.moderator == true ? (
+              {comment.userId === userId || dataUser.moderator === true ? (
                 <FaTrashAlt
                   className="delete-comment-btn"
                   onClick={() => deleteComment(comment.id)}

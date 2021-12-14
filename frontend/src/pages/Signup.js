@@ -19,8 +19,8 @@ export default function Signup() {
   }
 
   const emailReg =
-    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+[a-zA-Z0-9-]+)/;
-  const passwordReg = /^[A-Za-z0-9]\w{8,}$/;
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const passwordReg = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
   const signup = () => {
     Axios.post("http://localhost:4200/api/user/signup", {
@@ -35,10 +35,10 @@ export default function Signup() {
 
   function emailValidation(email, password) {
     if (!email.match(emailReg)) {
-      alert("error : email must be valid !");
+      alert("Erreur : votre email est invalide !");
       return;
     } else if (!password.match(passwordReg)) {
-      alert("error: password must be valid ! ");
+      alert("Erreur : votre mot de passe est invalide !");
       return;
     }
     signup();
@@ -46,14 +46,13 @@ export default function Signup() {
 
   return (
     <div className="form-container">
-      <h1 className="main-title">Sign up to Groupomania</h1>
+      <h1 className="main-title">S'inscrire sur le forum</h1>
 
       <div className="form-container-box">
         <div className="inputs">
           <div className="input">
-            <label htmlFor="inputName">Name:</label>
+            <label htmlFor="inputName">Nom :</label>
             <input
-              placeholder="name"
               className="form-control"
               id="inputName"
               type="text"
@@ -64,9 +63,8 @@ export default function Signup() {
           </div>
 
           <div className="input">
-            <label htmlFor="inputEmail">Email:</label>
+            <label htmlFor="inputEmail">Email :</label>
             <input
-              placeholder="email"
               type="email"
               className="form-control"
               id="inputEmail"
@@ -77,9 +75,8 @@ export default function Signup() {
           </div>
 
           <div className="input">
-            <label htmlFor="inputPassword">password:</label>
+            <label htmlFor="inputPassword">Mot de passe :</label>
             <input
-              placeholder="password"
               className="form-control"
               id="inputPassword"
               type="password"
@@ -96,7 +93,7 @@ export default function Signup() {
             className="submit-btn-login"
             onClick={(() => signup, () => emailValidation(email, password))}
           >
-            SUBMIT
+            S'INSCRIRE
           </button>
         </div>
       </div>

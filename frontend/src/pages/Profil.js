@@ -1,15 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
 import DataContext from "../DataContext";
-import "../style/profile.css";
+import "../style/profil.css";
 import DeleteAccModal from "../components/DeleteAccModal";
 import Axios from "axios";
 import { useHistory } from "react-router-dom";
 
-export default function Profile() {
+export default function Profil() {
   const history = useHistory();
 
   const [isOpenDeleteAccModal, setIsOpenDeleteAccModal] = useState(false);
-  const [isprofileDeleted, setisprofileDeleted] = useState(false);
+  const [isprofilDeleted, setisprofilDeleted] = useState(false);
 
   const { dataUser, LStoken } = useContext(DataContext);
 
@@ -32,27 +32,27 @@ export default function Profile() {
     Axios.delete(`http://localhost:4200/api/user/delete/${dataUser.id}`).then(
       (response) => {
         //console.log(response + "utilsateur supprimé");
-        setisprofileDeleted(true);
+        setisprofilDeleted(true);
         localStorage.setItem("token", "");
         localStorage.setItem("id", "");
       }
     );
   }
 
-  if (isprofileDeleted) {
+  if (isprofilDeleted) {
     return (
       <div className="main-container">
-        <div className="delete-profile-msg">Profile supprimé</div>
+        <div className="delete-profil-msg">profil supprimé</div>
       </div>
     );
   }
 
   return (
     <div className="main-container">
-      <h1 className="hidden-h1">Profile</h1>
+      <h1 className="hidden-h1">profil</h1>
       <div className="info-container">
         <div className="info">
-          <h2>Informations sur le profile</h2>
+          <h2>Votre profil</h2>
           <div className="underline" />
           <table>
             <thead className="thead">
@@ -69,43 +69,43 @@ export default function Profile() {
             <tr>
               <td>
                 {" "}
-                <p className="profile-info-input">
-                  nom d&apos;utilisateur
+                <p className="profil-info-input">
+                  Nom d&apos;utilisateur
                 </p>{" "}
               </td>
               <td>
                 {" "}
-                <p className="profile-line-data"> {dataUser.name}</p>{" "}
+                <p className="profil-line-data"> {dataUser.name}</p>{" "}
               </td>
             </tr>
 
             <tr>
               <td>
                 {" "}
-                <p className="profile-info-input">email</p>{" "}
+                <p className="profil-info-input">E-mail</p>{" "}
               </td>
               <td>
                 {" "}
-                <p className="profile-line-data">{dataUser.email}</p>{" "}
+                <p className="profil-line-data">{dataUser.email}</p>{" "}
               </td>
             </tr>
 
             <tr>
               <td>
                 {" "}
-                <p className="profile-info-input">créé le</p>{" "}
+                <p className="profil-info-input">Compte créé le</p>{" "}
               </td>
               <td>
                 {" "}
-                <p className="profile-line-data">{dataUser.createdAt}</p>{" "}
+                <p className="profil-line-data">{dataUser.createdAt}</p>{" "}
               </td>
             </tr>
           </table>
 
-          {dataUser.moderator == true ? (
-            <div className="card-status admin">ADMIN STATUS</div>
+          {dataUser.moderator === true ? (
+            <div className="card-status admin">ADMINISTRATEUR</div>
           ) : (
-            <div className="card-status user">USER STATUS</div>
+            <div className="card-status user">UTILISATEUR</div>
           )}
         </div>
       </div>
