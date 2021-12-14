@@ -1,0 +1,80 @@
+
+/*LOGIN*/
+
+.form-container { 
+    margin: auto;
+    width: 50%;
+  }
+  
+  .form-container-box{
+    margin: 30px auto;
+    background-color: white;
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .main-title {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  
+  .inputs {
+    margin: auto;
+    width: 70%;
+    padding: 4%;
+    flex-direction: column;
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button-login-container {
+    margin:  auto ;
+    width: 70%;
+    padding: 5%;
+  }
+  
+  .submit-btn-login {
+    width: 100%;
+  }
+
+  .signup-link {
+    text-decoration: underline;
+  }
+
+  .input-file {
+    width: 80%
+  }
+
+
+  @media (max-width: 768px) { 
+
+    .form-container {
+      margin: auto;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+
+  }
+
+
+  @media (max-width: 500px) { 
+
+    .form-container {
+      margin: auto;
+      width: 85%;
+  }
+
+  .main-title {
+    font-size: 27px;
+  }
+
+
+
+  }

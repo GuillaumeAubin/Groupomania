@@ -1,0 +1,27 @@
+.post-card {
+    width: 500px; 
+    height: 300px; 
+    background-color: pink;
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn-delete, .btn-update {
+    background-color: rgb(226, 255, 182);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;;
+    margin-right: 10px;
+}
+
+.title-card {
+    margin: 0;
+    color:rgb(68, 68, 68);
+    font-weight: 700
+}
+
+.img-card {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+}

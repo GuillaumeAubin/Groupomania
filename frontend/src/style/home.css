@@ -1,0 +1,91 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+
+.home-container {
+    width: 80%;
+    margin: 35px auto;
+}
+
+.last-activities-container {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: 20px;
+    padding: 2%;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.underline {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(209, 209, 209);
+    margin-top: 20px;
+}
+
+
+.wrap-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user-nb-online-container {
+    width: 25%;
+    height: 400px; 
+    background-color: white;
+    margin-top: 20px;
+}
+
+/* TABLE */
+.table-last-activities {
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+.column {
+    padding-top: 20px;
+}
+
+.title {
+width: 40%
+}
+
+.date {
+    width: 40%;
+    
+
+}
+
+.col-body {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width:60%;
+    max-width:60%;
+}
+
+
+thead tr {
+    text-align: left;
+}
+
+th, td {
+    padding: 15px 0px;
+}
+
+
+
+@media (max-width: 500px) {  
+
+    .home-container {
+        width: 90%;
+    }
+
+
+
+}
