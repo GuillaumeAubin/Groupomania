@@ -23,8 +23,8 @@ export default function Login() {
       password: password,
     }).then((response) => {
       localStorage.setItem("token", "Bearer " + response.data.token);
-      console.log(response.data.userId);
-      console.log(response.data.moderator);
+      //console.log(response.data.userId);
+      //console.log(response.data.moderator);
       localStorage.setItem("id", response.data.userId);
       localStorage.setItem("moderator", response.data.moderator);
       redirect();

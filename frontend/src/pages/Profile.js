@@ -31,7 +31,7 @@ export default function Profile() {
     //  function deleteAccount(id) {
     Axios.delete(`http://localhost:4200/api/user/delete/${dataUser.id}`).then(
       (response) => {
-        console.log(response + "utilsateur supprimé");
+        //console.log(response + "utilsateur supprimé");
         setisprofileDeleted(true);
         localStorage.setItem("token", "");
         localStorage.setItem("id", "");

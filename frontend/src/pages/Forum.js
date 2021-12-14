@@ -29,7 +29,7 @@ export default function Forum() {
 
   function getPostId(postId) {
     setModifyPostId(postId);
-    console.log(modifyPostId);
+    //console.log(modifyPostId);
   }
 
   function openModify() {
@@ -77,7 +77,8 @@ export default function Forum() {
         "Content-Type": "multipart/form-data",
         Authorization: LStoken,
       },
-    }).then((res) => console.log(res));
+    }).then((res) =>
+    console.log(res));
     setIsOpenModal(!isOpenModal);
     // refresh page after submit
     window.location.reload();

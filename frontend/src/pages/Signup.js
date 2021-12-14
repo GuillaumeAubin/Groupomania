@@ -28,7 +28,7 @@ export default function Signup() {
       email: email,
       password: password,
     }).then((response) => {
-      console.log(response);
+      //console.log(response);
       redirect();
     });
   };

@@ -23,7 +23,7 @@ export default function Home() {
   const [latestPosts, setLatestPosts] = useState([]);
   const [hour, setHour] = useState([]);
   const [day, setDay] = useState([]);
-  console.log(dataUser);
+  //console.log(dataUser);
 
   //console.log(dataUserId)
 
@@ -40,7 +40,7 @@ export default function Home() {
       }
     ).then((response) => {
       setLatestPosts(response.data);
-      console.log(response.data.updatedAt);
+      //console.log(response.data.updatedAt);
       const data = response.data;
 
       function formateDate(data) {

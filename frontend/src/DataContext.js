@@ -12,7 +12,7 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     Axios.get(`http://localhost:4200/api/user/${userId}`).then((response) => {
-      console.log(response.data);
+      //console.log(response.data);
       setDataUserId(response.data.id);
       setDataUser(response.data);
     });

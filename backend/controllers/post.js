@@ -21,10 +21,10 @@ exports.getLastActivityPost = (req, res) => {
 
 // Create a post
 exports.createPost = (req, res, next) => {
-  console.log(req.body);
+  //console.log(req.body);
   const postObject = req.body;
   const userId = req.body.userId;
-  console.log(userId);
+  //console.log(userId);
   const userName = req.body.userName;
   if (req.file) {
     postObject.imageUrl = `${req.protocol}://${req.get("host")}/images/${
@@ -44,7 +44,7 @@ exports.createPost = (req, res, next) => {
 
 // Modify a post
 exports.modifyPost = (req, res) => {
-  console.log(req.body);
+  //console.log(req.body);
   const postObject = req.body;
   Post.findOne({
     where: { id: req.params.id },

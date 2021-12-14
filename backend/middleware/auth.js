@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
     const decodedToken = jwt.verify(token, "RANDOM_TOKEN_SECRET");
     const userId = decodedToken.userId;
     const moderator = decodedToken.moderator;
-    console.log(moderator);
+    //console.log(moderator);
     if (
       (req.body.userId && req.body.userId !== userId) ||
       req.body.moderator == false
