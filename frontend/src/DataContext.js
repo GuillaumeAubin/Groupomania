@@ -11,11 +11,11 @@ export const DataProvider = ({ children }) => {
   // const isModeraror = localStorage.getItem('moderator')
 
   useEffect(() => {
-    Axios.get(`http://localhost:4200/api/user/${userId}`).then((response) => {
+    userId ? Axios.get(`http://localhost:4200/api/user/${userId}`).then((response) => {
       //console.log(response.data);
       setDataUserId(response.data.id);
       setDataUser(response.data);
-    });
+    }) : console.log("idNull");
   }, [userId]);
 
   return (

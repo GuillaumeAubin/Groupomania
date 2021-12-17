@@ -3,6 +3,7 @@ import "../style/header.css";
 import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import Logo from "../style/logos/icon-left-font-monochrome-black.svg";
 
 function Header() {
   const history = useHistory();
@@ -27,9 +28,9 @@ function Header() {
   return (
     <div>
       <header className="header-container">
+        <img className="logo-header" src={Logo} alt="logo Groupomania"/>
         <button className="toggle-nav-btn" onClick={displayLinks}>
           <FaBars />
-          <span className="text-nav-btn">menu-btn</span>
         </button>
       </header>
       <nav className={show ? "square active" : "square"}>
