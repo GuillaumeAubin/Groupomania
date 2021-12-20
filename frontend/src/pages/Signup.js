@@ -84,7 +84,7 @@ export default function Signup() {
                 setPassword(e.target.value);
               }}
             ></input>
-            <p>(Le mot de passe doit contenir au moins 8 caractères)</p>
+            <p>(Le mot de passe doit contenir au moins 8 caractères dont 1 chiffre)</p>
           </div>
         </div>
 
