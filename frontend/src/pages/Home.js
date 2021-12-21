@@ -27,6 +27,18 @@ export default function Home() {
 
   //console.log(dataUserId)
 
+  //2021-12-14T10:32:12.000Z
+  function formateDate(data) {
+    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+      const str = data[i].createdAt.slice(0, 10);
+      const day = str.replaceAll("-", "/");
+      setDay(day);
+      const hour = data[i].createdAt.slice(11, 19);
+      setHour(hour);
+    }
+  }
+
   useEffect(() => {
     // useEffect((dataUserId) => {
 
@@ -40,18 +52,7 @@ export default function Home() {
       }
     ).then((response) => {
       setLatestPosts(response.data);
-      //console.log(response.data.updatedAt);
       const data = response.data;
-
-      function formateDate(data) {
-        for (let i = 0; i < data.length; i++) {
-          const str = data[i].createdAt.slice(0, 10);
-          const day = str.replaceAll("-", "/");
-          setDay(day);
-          const hour = data[i].createdAt.slice(11, 19);
-          setHour(hour);
-        }
-      }
       formateDate(data);
     });
   }, [LStoken]);
@@ -78,11 +79,12 @@ export default function Home() {
               </thead>
               <tbody>
                 {latestPosts.map((post) => {
+                  const day = new Date(post.createdAt);
                   return (
-                    <tr>
+                    <tr key={post.id}>
                       <td className="col-body">{post.title}</td>
-                      <td className="col-body col-body2" id="date">
-                        le {day} à {hour}
+                      <td className="col-body col-body2" id={post.id}>
+                        le {day.getDate()}/{day.getMonth()}/{day.getFullYear()} à {day.getHours()}:{day.getMinutes()}
                       </td>
                     </tr>
                   );

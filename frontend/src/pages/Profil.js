@@ -66,40 +66,42 @@ export default function Profil() {
               </tr>
             </thead>
 
-            <tr>
-              <td>
-                {" "}
-                <p className="profil-info-input">
-                  Nom d&apos;utilisateur
-                </p>{" "}
-              </td>
-              <td>
-                {" "}
-                <p className="profil-line-data"> {dataUser.name}</p>{" "}
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  {" "}
+                  <p className="profil-info-input">
+                    Nom d&apos;utilisateur
+                  </p>{" "}
+                </td>
+                <td>
+                  {" "}
+                  <p className="profil-line-data"> {dataUser.name}</p>{" "}
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                {" "}
-                <p className="profil-info-input">E-mail</p>{" "}
-              </td>
-              <td>
-                {" "}
-                <p className="profil-line-data">{dataUser.email}</p>{" "}
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  {" "}
+                  <p className="profil-info-input">E-mail</p>{" "}
+                </td>
+                <td>
+                  {" "}
+                  <p className="profil-line-data">{dataUser.email}</p>{" "}
+                </td>
+              </tr>
 
-            <tr>
-              <td>
-                {" "}
-                <p className="profil-info-input">Compte créé le</p>{" "}
-              </td>
-              <td>
-                {" "}
-                <p className="profil-line-data">{dataUser.createdAt}</p>{" "}
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  {" "}
+                  <p className="profil-info-input">Compte créé le</p>{" "}
+                </td>
+                <td>
+                  {" "}
+                  <p className="profil-line-data">{dataUser.createdAt}</p>{" "}
+                </td>
+              </tr>
+            </tbody>
           </table>
 
           {dataUser.moderator === true ? (

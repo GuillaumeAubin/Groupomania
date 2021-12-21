@@ -97,7 +97,7 @@ export default function CommentSection({ postId }) {
       <div className="comment-section">
         {comments.map((comment) => {
           return (
-            <div className="comment-single">
+            <div key={comment.id} className="comment-single">
               <div className="comment-inner-container">
                 <p className="comment-of">{comment.userName} a répondu</p>
                 <p className="comment-text">{comment.content}</p>
