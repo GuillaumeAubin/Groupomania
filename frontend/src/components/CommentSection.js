@@ -68,12 +68,11 @@ export default function CommentSection({ postId }) {
 
   return (
     <div>
-      <div className="horizontal-bar"></div>
       <button
         className="add-comment-btn"
         onClick={() => setIsOpenCommentModal(true)}
       >
-        Répondre
+        REPONDRE
       </button>
 
       <AddCommentModal

@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useState, useContext } from "react";
 import Axios from "axios";
-import "../style/forum.css";
+import "../style/forum copy.css";
 // import DropdownDelMod from '../components/DropdownDelMod'
 import Modal from "../components/Modal";
 import CommentSection from "../components/CommentSection";
@@ -213,22 +213,19 @@ export default function Forum() {
 
         return [...posts].reverse().map((post) => (
           <div key={post.id} className="forum-card">
-            <div className="card-profil-picture">
+            <div className="card-title-box">
+              <h2>{post.title} </h2>
               <img src="../profil.png" alt="profil" />
+              <p className="created-by-tag-laptop">{post.userName} a écrit</p>
             </div>
-            <div className="card-content">
-              <p className="content-name">{post.userName}</p>
-              <h2>{post.title}</h2>
-              <span>{post.content}</span>
-              <div className="card-box-image">
-                <img className="post-img" src={`${post.imageUrl}`} alt="" />
-              </div>
-              <div className="">
+            <p className="created-by-tag-smartphone">{post.userName} a écrit</p>
+            <div className="card-body">
+              <img className="post-img" src={`${post.imageUrl}`} alt="" />
+              <div className="container-buttons">
                 {post.userId === userId || dataUser.moderator === true ? (
-                  <div className="list-btn">
-                    <CommentSection postId={post.id} />
+                  <div>
                     <button
-                      className=""
+                      className="delete-btn"
                       onClick={() => {
                         deletePost(post.id, post.userId);
                       }}
@@ -236,7 +233,7 @@ export default function Forum() {
                       SUPPRIMER
                     </button>
                     <button
-                      className=""
+                      className="modify-btn"
                       onClick={() => {
                         openModify();
                         getPostId(postId);
@@ -248,6 +245,18 @@ export default function Forum() {
                 ) : null}
               </div>
             </div>
+
+            <p>{post.content}</p>
+
+            {/* // <DropdownDelMod open={isOpen} postId={post.id} > */}
+
+            <div className="container-DropdownDelMod">
+              <div className="container-comments">
+                <CommentSection postId={post.id} />
+              </div>
+            </div>
+            {/* 
+                   // </DropdownDelMod> */}
           </div>
         ));
       })}
