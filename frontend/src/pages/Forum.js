@@ -131,7 +131,6 @@ export default function Forum() {
   return (
     <div className="forum-container">
       <h1 className="hidden-h1">Forum</h1>
-
       <button className="btn upload" onClick={() => setIsOpenModal(true)}>
         <FaPlus />
         Ajouter
@@ -170,7 +169,6 @@ export default function Forum() {
           ENVOYER
         </button>
       </Modal>
-
       <ModifyModal
         openModify={isOpenModifyModal}
         onClose={() => setIsOpenModifyModal(false)}
@@ -213,10 +211,11 @@ export default function Forum() {
         //{posts.map((post, ofUser) => {
         const postId = post.id;
 
-        return (
+        return [...posts].reverse().map((post) => (
           <div key={post.id} className="forum-card">
             <div className="card-title-box">
               <h2>{post.title} </h2>
+              <img src="../profil.png" alt="profil" />
               <p className="created-by-tag-laptop">{post.userName} a écrit</p>
             </div>
             <p className="created-by-tag-smartphone">{post.userName} a écrit</p>
@@ -247,7 +246,7 @@ export default function Forum() {
               </div>
             </div>
 
-            <p>{post.content} </p>
+            <p>{post.content}</p>
 
             {/* // <DropdownDelMod open={isOpen} postId={post.id} > */}
 
@@ -259,7 +258,7 @@ export default function Forum() {
             {/* 
                    // </DropdownDelMod> */}
           </div>
-        );
+        ));
       })}
     </div>
   );

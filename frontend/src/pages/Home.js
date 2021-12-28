@@ -29,7 +29,6 @@ export default function Home() {
 
   //2021-12-14T10:32:12.000Z
   function formateDate(data) {
-    console.log(data);
     for (let i = 0; i < data.length; i++) {
       const str = data[i].createdAt.slice(0, 10);
       const day = str.replaceAll("-", "/");
@@ -69,8 +68,11 @@ export default function Home() {
             <table className="table-last-activities">
               <thead>
                 <tr>
+                  <th className="column autor" colSpan="2">
+                    Auteur
+                  </th>
                   <th className="column title" colSpan="1">
-                    Titre du post
+                    Titre
                   </th>
                   <th className="column date" colSpan="1">
                     Date de publication
@@ -82,9 +84,14 @@ export default function Home() {
                   const day = new Date(post.createdAt);
                   return (
                     <tr key={post.id}>
+                      <td className="col-body">
+                        <img src="../profil.png" alt="profil" id="profilPic"/>
+                      </td>
+                      <td className="col-body">{post.userName}</td>
                       <td className="col-body">{post.title}</td>
-                      <td className="col-body col-body2" id={post.id}>
-                        le {day.getDate()}/{day.getMonth()}/{day.getFullYear()} à {day.getHours()}:{day.getMinutes()}
+                      <td className="col-body" id={post.id}>
+                        le {day.getDate()}/{day.getMonth()}/{day.getFullYear()}{" "}
+                        à {day.getHours()}:{day.getMinutes()}
                       </td>
                     </tr>
                   );
