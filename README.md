@@ -1,35 +1,61 @@
-GROUPOMANIA
+# ![left 100%](https://github.com/thierry-laval/archives/blob/master/images/Logo_OpenClassrooms.png?raw=true) OpenClassrooms - Développeur Web - Réseau social d’entreprise de A à Z
+## Auteur
 
-Ceci est le dernier projet de ma formation Openclassrooms, création d'un réseau social d'entreprise : Groupomania
+👤 &nbsp; **Guillaume AUBIN**
 
-J'ai réalise tout le Back et tout le Front. C'est mon premier projet utilisant SQL, et j'ai choisis le SGBDR MySQL j'utilise la première syntaxe et je n'utilise pas les mots clé tels que JOIN, INNER, OUTER, LEFT, RIGHT, car le tuto que j'ai suivi était ancien. Mais toutes les requêtes sont fonctionnelles.
+* GitHub: [@Guillaume Aubin](https://github.com/GuillaumeAubin?tab=repositories "Cliquez pour voir mes projets")
+* LinkedIn: [@Guillaume Aubin](https://www.linkedin.com/in/aubinguillaume/ "Visitez mon profil LinkedIn")
 
-C'est également mon premier projet avec React. J'ai beaucoup appris, mais étant mon premier projet, j'ai pris de mauvaises habitudes de code dès le début, c'est pour cette raison que je manipule parfois, mais TRÈS RAREMENT le DOM directement sans passer par le shadow DOM. En faite, la seule fois ou je fais ça c'est pour changer ou rechanger la page, quoi que j'utilise quand même le Hooks UseHistory et la librairie react-router-dom.
+***
+## 📎 Projet 7 - Créez un réseau social d’entreprise "GROUPOMANIA"
 
-Donc si j'avais une chose à modifier ce serait ça. Après bien sûr, si j'avais le temps que je veux et pas d'autres projets à réaliser derrière, j'aurais LARGEMENT amélioré le design du Front, créer des pages par utilisateurs etc. Mais je suis resté dans les limites du projets.
+### 🔨 Construisez un réseau social avec JavaScript
 
-J'ai beaucoup appris et je vais continuer de faire des projets avec React, notamment des projets MERN car je préfère utiliser Mongo pour le moment.
+Le site hébergé sur GitHub : [GROUPOMANIA](https://github.com/GuillaumeAubin/Groupomania)
 
-Pour lancer le projet :
+##### Compétences évaluées
 
-Se rendre dans dossier backend et installer node et toute les dépendances :
+* Authentifier un utilisateur et maintenir sa session
+* Personnaliser le contenu envoyé à un client web
+* Gérer un stockage de données à l'aide de SQL
+* Implémenter un stockage de données sécurisé en utilisant SQL
+* Respecter les [spécifications fonctionnelles et techniques](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DWJ_FR_P7/Groupomania_Specs_FR_DWJ_VF.pdf "voir les spécifications")
 
-cd back-end/ && npm i
+***
 
-Ensuite, lancer le server :
+### Développement Frontend en JavaScript
+* React.js
+* React Router-dom
+* Axios
+* Web-vitals
+* CSS
 
-nodemon server.js
+### Développement Backend en JavaScript
 
-Enfin, pour lancer le Front, ouvrir un nouveau terminal et se rendre dans le dossier front-end
+* Serveur Node.js
+* Framework Express
+* Base de données MySQL
+  * Utilisation de PHPmyAdmin via XAMPP
+  * Sequelize
+* Sécurité OWASP et RGPD
 
-cd front-end/
+***
 
-puis lancer react
+### Test de l'application
 
-npm start
+##### Cloner le Front
 
-Si il y a des erreurs, essayer de lancer ces commandes en étant admin.
+1. Cloner le <a href='https://github.com/GuillaumeAubin/Groupomania/tree/master/frontend'>frontend</a> de l'application.
+2. Installer les dépendances : npm install
+3. Lancer : npm start
 
-La guideline à suivre se trouve dans le dossier « docs »
+##### Cloner le Back
 
-J'ai crée des maquettes pour faire mon front, trouvables dans le dossier docs (documents adobeXD)
+1. Cloner le <a href='https://github.com/GuillaumeAubin/Groupomania/tree/master/backend'>backend</a> de l'application.
+2. Pour le projet, le fichier .env est ignoré dans gitignore
+3. installer les dépendances : npm install
+4. lancer : nodemon
+
+***
+
+Il s'agit de mon premier projet avec React. J'ai beaucoup appris, mais étant mon premier projet, j'ai également pris de mauvaises habitudes de code. Tout retour de votre part est instructif. Je continuerai à travailler sur des projets avec React.js, cette librairie comporte beaucoup de points forts à commencer par la réutilisabilité des composants. Cependant, je prioriserai une base de données sur MongoDB plutôt que sur MySQL pour les petits projets.
