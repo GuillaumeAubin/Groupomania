@@ -2,6 +2,11 @@
   display: none;
 }
 
+.upload {
+  font-weight: 800;
+  line-height: 1;
+}
+
 .forum-container {
   width: 50%;
   margin: 20px auto;
@@ -31,17 +36,37 @@
   margin-top: 10px;
   border-radius: 30px;
   width: 100%;
-  max-height: 500px;
+  max-height: 550px;
 }
 
-.list-btn {
+.three-btn {
   display: flex;
-  height: 30px;
   justify-content: space-between;
 }
 
+button {
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #d1515a;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  line-height: 0;
+  padding: 15px 20px;
+}
 
+button:hover {
+  background-color: #ad444b;
+}
 
+.modify-btn {
+  margin: 0 0 5px 5px;
+  float: right;
+}
+
+.delete-btn {
+  float: right;
+}
 
 @media (max-width: 425px) {
   .forum-container {

@@ -67,7 +67,7 @@ export default function CommentSection({ postId }) {
   }, []);
 
   return (
-    <div>
+    <div className="comment-card">
       <button
         className="add-comment-btn"
         onClick={() => setIsOpenCommentModal(true)}
@@ -97,17 +97,20 @@ export default function CommentSection({ postId }) {
         {comments.map((comment) => {
           return (
             <div key={comment.id} className="comment-single">
-              <div className="comment-inner-container">
-                <p className="comment-of">{comment.userName} a répondu</p>
-                <p className="comment-text">{comment.content}</p>
+              <div className="card-profil-picture">
+                <img src="../profil-2.png" alt="profil" />
               </div>
+              <div className="card-content">
+                <p className="content-name">{comment.userName}</p>
+                <span>{comment.content}</span>
 
-              {comment.userId === userId || dataUser.moderator === true ? (
-                <FaTrashAlt
-                  className="delete-comment-btn"
-                  onClick={() => deleteComment(comment.id)}
-                />
-              ) : null}
+                {comment.userId === userId || dataUser.moderator === true ? (
+                  <FaTrashAlt
+                    className="delete-comment-btn"
+                    onClick={() => deleteComment(comment.id)}
+                  />
+                ) : null}
+              </div>
             </div>
           );
         })}

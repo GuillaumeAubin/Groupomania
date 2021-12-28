@@ -132,8 +132,7 @@ export default function Forum() {
     <div className="forum-container">
       <h1 className="hidden-h1">Forum</h1>
       <button className="btn upload" onClick={() => setIsOpenModal(true)}>
-        <FaPlus />
-        Ajouter
+        <FaPlus /> NOUVEAU POST
       </button>
       <Modal open={isOpenModal} onClose={() => setIsOpenModal(false)}>
         <input
@@ -212,42 +211,44 @@ export default function Forum() {
         const postId = post.id;
 
         return [...posts].reverse().map((post) => (
-          <div key={post.id} className="forum-card">
-            <div className="card-profil-picture">
-              <img src="../profil.png" alt="profil" />
-            </div>
-            <div className="card-content">
-              <p className="content-name">{post.userName}</p>
-              <h2>{post.title}</h2>
-              <span>{post.content}</span>
-              <div className="card-box-image">
-                <img className="post-img" src={`${post.imageUrl}`} alt="" />
+          <div key={post.id}>
+            <div className="forum-card">
+              <div className="card-profil-picture">
+                <img src="../profil.png" alt="profil" />
               </div>
-              <div className="">
-                {post.userId === userId || dataUser.moderator === true ? (
-                  <div className="list-btn">
-                    <CommentSection postId={post.id} />
-                    <button
-                      className=""
-                      onClick={() => {
-                        deletePost(post.id, post.userId);
-                      }}
-                    >
-                      SUPPRIMER
-                    </button>
-                    <button
-                      className=""
-                      onClick={() => {
-                        openModify();
-                        getPostId(postId);
-                      }}
-                    >
-                      MODIFIER
-                    </button>
-                  </div>
-                ) : null}
+              <div className="card-content">
+                <p className="content-name">{post.userName}</p>
+                <h2>{post.title}</h2>
+                <span>{post.content}</span>
+                <div className="card-box-image">
+                  <img className="post-img" src={`${post.imageUrl}`} alt="" />
+                </div>
               </div>
             </div>
+            <div>
+              {post.userId === userId || dataUser.moderator === true ? (
+                <div className="modify-delete btn">
+                  <button
+                    className="modify-btn"
+                    onClick={() => {
+                      openModify();
+                      getPostId(postId);
+                    }}
+                  >
+                    MODIFIER
+                  </button>
+                  <button
+                    className="delete-btn"
+                    onClick={() => {
+                      deletePost(post.id, post.userId);
+                    }}
+                  >
+                    SUPPRIMER
+                  </button>
+                </div>
+              ) : null}
+            </div>
+            <CommentSection postId={post.id} />
           </div>
         ));
       })}
