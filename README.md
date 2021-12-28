@@ -58,4 +58,6 @@ Le site hébergé sur GitHub : [GROUPOMANIA](https://github.com/GuillaumeAubin/G
 
 ***
 
-Il s'agit de mon premier projet avec React. J'ai beaucoup appris, mais étant mon premier projet, j'ai également pris de mauvaises habitudes de code. Tout retour de votre part est instructif. Je continuerai à travailler sur des projets avec React.js, cette librairie comporte beaucoup de points forts à commencer par la réutilisabilité des composants. Cependant, je prioriserai une base de données sur MongoDB plutôt que sur MySQL pour les petits projets.
+Il s'agit de mon premier projet avec React. J'ai beaucoup appris, mais étant mon premier projet, j'ai également pris de mauvaises habitudes de code. Tout retour de votre part est instructif.
+
+Je continuerai à travailler sur des projets avec React.js, cette librairie comporte beaucoup de points forts à commencer par la réutilisabilité des composants. Cependant, je prioriserai une base de données sur MongoDB plutôt que sur MySQL pour les petits projets.
