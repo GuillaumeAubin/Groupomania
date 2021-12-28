@@ -28,7 +28,7 @@ function Header() {
   return (
     <div>
       <header className="header-container">
-        <img className="logo-header" src={Logo} alt="logo Groupomania"/>
+        <a href="http://localhost:3000/forum"><img className="logo-header" src={Logo} alt="logo Groupomania"/></a>
         <button className="toggle-nav-btn" onClick={displayLinks}>
           <FaBars />
         </button>

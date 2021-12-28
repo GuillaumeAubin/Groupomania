@@ -10,12 +10,18 @@
 .forum-container {
   width: 50%;
   margin: 20px auto;
+  margin-bottom: 60px;
 }
 
 .forum-card {
   display: flex;
   margin-top: 20px;
 }
+
+.comment-card{
+  margin-bottom: 40px;
+}
+
 
 .card-profil-picture img {
   width: 50px;
