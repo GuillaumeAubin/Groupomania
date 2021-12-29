@@ -5,7 +5,9 @@ const jwt = require("jsonwebtoken");
 
 // Get all posts
 exports.getAllPosts = (req, res) => {
-  Post.findAll()
+  Post.findAll({
+    order: [["createdAt", "DESC"]],
+  })
     .then((posts) => res.status(200).json(posts))
     .catch((error) => res.status(400).json({ error }));
 };
@@ -14,6 +16,7 @@ exports.getAllPosts = (req, res) => {
 exports.getLastActivityPost = (req, res) => {
   Post.findAll({
     limit: 3,
+    order: [["createdAt", "DESC"]]
   })
     .then((posts) => res.status(201).json(posts))
     .catch((error) => res.status(400).json({ error }));

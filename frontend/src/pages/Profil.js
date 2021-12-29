@@ -26,6 +26,14 @@ export default function Profil() {
   }, []);
 
   /////////////////////////////////////
+  //     2021-12-13T11:15:52.000Z
+
+  function formateDate(data) {
+    const str = data.slice(0, 10);
+    const day = str.replaceAll("-", "/");
+    const hour = data.slice(11, 19);
+    return day + " à " + hour;
+  }
 
   function deleteAccount() {
     //  function deleteAccount(id) {
@@ -98,7 +106,9 @@ export default function Profil() {
                 </td>
                 <td>
                   {" "}
-                  <p className="profil-line-data">{dataUser.createdAt}</p>{" "}
+                  <p className="profil-line-data">
+                    {formateDate(dataUser.createdAt)}
+                  </p>{" "}
                 </td>
               </tr>
             </tbody>

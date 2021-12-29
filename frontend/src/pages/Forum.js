@@ -210,7 +210,7 @@ export default function Forum() {
         //{posts.map((post, ofUser) => {
         const postId = post.id;
 
-        return [...posts].reverse().map((post) => (
+        return (
           <div key={post.id}>
             <div className="forum-card">
               <div className="card-profil-picture">
@@ -250,7 +250,7 @@ export default function Forum() {
             </div>
             <CommentSection postId={post.id} />
           </div>
-        ));
+        );
       })}
     </div>
   );

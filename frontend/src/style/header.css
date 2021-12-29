@@ -60,7 +60,8 @@
   border: none;
   font-size: 25px;
   color: #d1515a;
-  margin: 9px 5px 0 20px;
+  padding-top: 10px;
+  margin-left: 10px;
   cursor: pointer;
 }
 

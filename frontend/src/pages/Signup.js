@@ -33,12 +33,15 @@ export default function Signup() {
     });
   };
 
-  function emailValidation(email, password) {
+  function emailValidation(email, password, name) {
     if (!email.match(emailReg)) {
       alert("Erreur : votre email est invalide !");
       return;
     } else if (!password.match(passwordReg)) {
       alert("Erreur : votre mot de passe est invalide !");
+      return;
+    } else if (name === "" || name === undefined) {
+      alert("Erreur : Vous n'avez pas entré votre nom");
       return;
     }
     signup();
@@ -84,14 +87,19 @@ export default function Signup() {
                 setPassword(e.target.value);
               }}
             ></input>
-            <p>(Le mot de passe doit contenir au moins 8 caractères dont 1 chiffre)</p>
+            <p>
+              (Le mot de passe doit contenir au moins 8 caractères dont 1
+              chiffre)
+            </p>
           </div>
         </div>
 
         <div className="button-login-container">
           <button
             className="submit-btn-login"
-            onClick={(() => signup, () => emailValidation(email, password))}
+            onClick={
+              (() => signup, () => emailValidation(email, password, name))
+            }
           >
             S'INSCRIRE
           </button>
