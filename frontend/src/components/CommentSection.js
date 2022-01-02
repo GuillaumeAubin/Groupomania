@@ -26,11 +26,8 @@ export default function CommentSection({ postId }) {
   );
 
   const submitComment = useCallback(() => {
-    //console.log(LStoken);
     const userId = dataUser.id;
     const userName = dataUser.name;
-    //console.log(postId);
-    //console.log(userName);
     Axios.post(
       `http://localhost:4200/api/comment/${postId}`,
       {

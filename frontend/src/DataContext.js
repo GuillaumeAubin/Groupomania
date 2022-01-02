@@ -8,7 +8,7 @@ export const DataProvider = ({ children }) => {
   const LStoken = localStorage.getItem("token");
   const userId = localStorage.getItem("id");
   const [dataUserId, setDataUserId] = useState("");
-  // const isModeraror = localStorage.getItem('moderator')
+  // const isModerator = localStorage.getItem('moderator')
 
   useEffect(() => {
     userId ? Axios.get(`http://localhost:4200/api/user/${userId}`).then((response) => {

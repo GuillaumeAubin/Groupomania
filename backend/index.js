@@ -44,5 +44,5 @@ app.use("/api/postforum", postforumRoutes);
 app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.listen(4200, () => {
-  console.log("running on port 4200");
+  console.log("Backend running on port 4200");
 });
