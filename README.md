@@ -1,4 +1,4 @@
-# ![left 100%](https://github.com/thierry-laval/archives/blob/master/images/Logo_OpenClassrooms.png?raw=true) OpenClassrooms - Développeur Web - Réseau social d’entreprise de A à Z
+# ![left 100%](https://github.com/thierry-laval/archives/blob/master/images/Logo_OpenClassrooms.png?raw=true) OpenClassrooms - Développeur Web - Réseau social d’entreprise
 ## Auteur
 
 👤 &nbsp; **Guillaume AUBIN**
